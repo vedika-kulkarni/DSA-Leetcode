@@ -1,17 +1,12 @@
 class Solution {
     public int findNumbers(int[] nums) {
-        int k=0;
+        int count=0;
         for(int i=0; i<nums.length; i++){
-            int count =0;
-            int n = nums[i];
-            while(n>0){
-                n = n/10;
+            String s = Integer.toString(nums[i]);
+            if(s.length()%2 == 0){
                 count++;
             }
-            if(count % 2 == 0){
-                k++;
-            }
         }
-        return k;
+        return count++;
     }
 }
